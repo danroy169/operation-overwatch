@@ -1,7 +1,7 @@
 .grid{
     display:grid;
-    grid-template-columns: 0.75fr 8fr;
-    grid-template-rows: 0.5fr 10fr 0.25fr;
+    grid-template-columns: 1fr 8fr;
+    grid-template-rows: 0.25fr 10fr 0.25fr;
     grid-template-areas: 
         "header header"
         "nav content"
@@ -42,17 +42,25 @@
 .inner-grid{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: 0.25fr 1fr 1fr 1fr;
     height: 100%;
+    grid-template-areas: 
+    "inner-header inner-header inner-header"
+    "box box box"
+    "box box box"
+    "box box box";
 }
 
 .inner-grid-box{
     border: 1px dotted red;
 }
 
-.header{
+.inner-grid-header{
+    grid-area: inner-header;
+}
+header{
     text-align: center;
-    color: rgb(241,241,241);
+    color: rgb(64,66,69);
 }
 
 .link{
@@ -70,4 +78,10 @@
 a{
     color: rgb(241,241,241);
     text-decoration: none;
+}
+.logo-wrapper{
+    margin: 1em;
+}
+.logo{
+   width:100%;
 }
