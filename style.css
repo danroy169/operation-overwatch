@@ -1,0 +1,42 @@
+header{
+    text-align: center;
+    background-color: red;
+    margin-left: 10%;
+}
+
+.nav{
+    width:10%;
+    background-color:darkslategray;
+    position:fixed;
+	top:0;
+	left:0;
+    height:100%;
+}
+
+.main{
+    margin-left: 10%;
+    padding-right: 1ch;
+}
+
+ul{
+    list-style:none;
+}
+
+li{
+    padding: 1em;
+    font-size:0.95em;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+a{
+    color:beige;
+    text-decoration: none;
+}
+li:hover{
+    background-color: slategray;
+}
+
+.box{
+    border: 1px solid rgb(204, 60, 60);
+}
