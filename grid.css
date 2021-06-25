@@ -1,21 +1,18 @@
 .grid{
-    border: 2px solid purple;
+
     display:grid;
     grid-template-columns: 1fr 8fr;
     grid-template-rows: 1fr 10fr;
     grid-template-areas: 
-        "nav header"
+        "header header"
         "nav content"
         "nav content"
         "nav content";
     height: 100%;
 }
-.nav-wrapper, .content-wrapper, .header-wrapper, .inner-grid, .box{
-    border: 1px solid red;
 
-}
 .app{
-    border: 3px solid black;
+
     position: absolute;
     top:0;
     bottom:0;
@@ -24,17 +21,18 @@
     height: 100%;
 }
 
-.nav, .header, .content{
-    border: 1px dotted blue;
-    
-}
-
 .nav-wrapper{
     grid-area: nav;
-    background-color:darkslategray;
+    background-color:rgb(64, 66, 69);
+    text-align: center;
+    font-size:0.95em;
+    font-weight:bold;
 }
+
 .header-wrapper{
     grid-area: header;
+    background-image:url('./supergfx.png');
+    background-size:cover;
 }
 .content-wrapper{
     grid-area: content;
@@ -46,28 +44,28 @@
     height: 100%;
 }
 
+.inner-grid-box{
+    border: 1px dotted red;
+}
+
 .header{
     text-align: center;
+    color: rgb(241,241,241);
 }
 
-
-ul{
-    list-style:none;
-}
-
-li{
-    
-    font-size:0.95em;
-    font-weight:bold;
+.link{
     cursor:pointer;
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+.link:hover{
+    background-color: rgb(128,130,133);
     width: 100%;
 }
 
+
 a{
-    color:beige;
+    color: rgb(241,241,241);
     text-decoration: none;
 }
-li:hover{
-    background-color: slategray;
-}
-
