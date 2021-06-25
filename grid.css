@@ -85,3 +85,15 @@ a{
 .logo{
    width:100%;
 }
+.content-header{
+    border: 1px dotted blue;
+    text-align: center;
+}
+.content-main{
+    border: 1px dotted green;
+    height: 100%;
+}
+
+.content-main li{
+    margin: 1em;
+}
