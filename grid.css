@@ -1,18 +1,15 @@
 .grid{
-
     display:grid;
-    grid-template-columns: 1fr 8fr;
-    grid-template-rows: 1fr 10fr;
+    grid-template-columns: 0.75fr 8fr;
+    grid-template-rows: 0.5fr 10fr 0.25fr;
     grid-template-areas: 
         "header header"
         "nav content"
-        "nav content"
-        "nav content";
+        "footer footer";
     height: 100%;
 }
 
 .app{
-
     position: absolute;
     top:0;
     bottom:0;
@@ -31,6 +28,11 @@
 
 .header-wrapper{
     grid-area: header;
+    background-image:url('./supergfx.png');
+    background-size:cover;
+}
+.footer-wrapper{
+    grid-area: footer;
     background-image:url('./supergfx.png');
     background-size:cover;
 }
