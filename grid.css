@@ -49,10 +49,14 @@
     "box box box"
     "box box box"
     "box box box";
+    grid-gap: 1em;
+    margin: 1em;
+    align-items: center;
 }
 
 .inner-grid-box{
-    border: 1px dotted red;
+    border: 2px dotted darkblue;
+   
 }
 
 .inner-grid-header{
@@ -88,10 +92,14 @@ a{
 .content-header{
     border: 1px dotted blue;
     text-align: center;
+    background-color: darkblue;
+    color:rgb(241,241,241);
 }
 .content-main{
-    border: 1px dotted green;
-    height: 100%;
+    border: 4px dotted green;
+    background-color: beige;
+    margin: 1em;
+    
 }
 
 .content-main li{
