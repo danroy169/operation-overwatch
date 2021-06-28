@@ -1,3 +1,18 @@
+@font-face{
+    font-family: BoschBold;
+    src:url('./BoschSans-Bold.woff')
+}
+@font-face{
+    font-family: BoschSans;
+    src:url('./BoschSans-Regular.woff')
+}
+@font-face{
+    font-family: BoschBlack;
+    src:url('./BoschSans-Black.woff')
+}
+html{
+    font-family: BoschSans;
+}
 .grid{
     display:grid;
     grid-template-columns: 1fr 8fr;
@@ -25,7 +40,6 @@
     background-color:rgb(64, 66, 69);
     text-align: center;
     font-size:0.95em;
-    font-weight:bold;
 }
 
 .header-wrapper{
@@ -54,6 +68,7 @@
 
 .inner-grid-box{
     border: 2px dotted darkblue;
+    margin: 0.5em;
    
 }
 
@@ -64,6 +79,7 @@
 header{
     text-align: center;
     color: rgb(64,66,69);
+    font-family: BoschBlack;
 }
 
 .link{
@@ -93,6 +109,8 @@ a{
     text-align: center;
     background-color: rgb(64, 66, 69);
     color:rgb(241,241,241);
+    padding: 1em;
+    font-family: BoschBold;
 }
 .content-main{
     border: 4px dotted green;
@@ -107,7 +125,7 @@ a{
 .header-wrapper{
     color:rgb(241,241,241);
     text-align: right;
-    font-weight: bold;
+    
 }
 
 #date{
