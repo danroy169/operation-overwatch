@@ -15,7 +15,6 @@
     bottom:0;
     left:0;
     right:0;
-    height: 100%;
 }
 
 .nav-wrapper{
@@ -43,16 +42,15 @@
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0.25fr 1fr 1fr 1fr;
-    height: 100%;
     grid-template-areas: 
     "inner-header inner-header inner-header"
     "box box box"
     "box box box"
     "box box box";
     grid-gap: 1em;
-    margin-left: 1em;
-    margin-right: 1em;
+    margin: 1em;
     align-items: center;
+    border: 3px dotted red;
 }
 
 .inner-grid-box{
@@ -101,5 +99,18 @@ a{
     border: 4px dotted green;
     background-color: beige;
     margin: 1em;
-    
+}
+
+.inner-grid-header{
+    margin-top: 0.25em;
+}
+
+.header-wrapper{
+    color:rgb(241,241,241);
+    text-align: right;
+    font-weight: bold;
+}
+
+#date{
+    margin-right: 1em;
 }
