@@ -14,11 +14,10 @@
     left:0;
     right:0;
     display: grid;
-    grid-template-rows: 0.25fr 10fr 0.25fr;
+    grid-template-rows: 0.25fr 10fr;
     grid-template-areas: 
         "header"
-        "main"
-        "footer";
+        "main";
 }
 
 .nav-wrapper{
@@ -31,11 +30,6 @@
 
 .header-wrapper{
     grid-area: header;
-    background-image:url('./supergfx.png');
-    background-size:cover;
-}
-.footer-wrapper{
-    grid-area: footer;
     background-image:url('./supergfx.png');
     background-size:cover;
 }
