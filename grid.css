@@ -74,7 +74,8 @@ html{
 
 .inner-grid-header{
     grid-area: inner-header;
-    border: 3px dotted
+    border: 3px dotted;
+    margin: 0.5em;
 }
 header{
     text-align: center;
