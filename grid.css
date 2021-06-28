@@ -109,13 +109,11 @@ header{
 }
 
 .inner-grid-box{
-    border: 2px dotted darkblue;
+    border: 2px solid  rgb(64, 66, 69);
     margin: 0.5em;
-   
 }
 
 .content-header{
-    border: 1px dotted blue;
     text-align: center;
     background-color: rgb(64, 66, 69);
     color:rgb(241,241,241);
