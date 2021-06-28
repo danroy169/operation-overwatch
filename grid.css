@@ -12,14 +12,7 @@
 }
 html{
     font-family: BoschSans;
-}
-.grid{
-    display:grid;
-    grid-template-columns: 1fr 8fr;
-    grid-template-areas: 
-        "nav content";
-    height: 100%;
-    grid-area: main;
+    color: rgb(64,66,69);
 }
 
 .app{
@@ -35,6 +28,23 @@ html{
         "main";
 }
 
+.grid{
+    display:grid;
+    grid-template-columns: 1fr 8fr;
+    grid-template-areas: 
+        "nav content";
+    height: 100%;
+    grid-area: main;
+}
+
+.header-wrapper{
+    grid-area: header;
+    background-image:url('./supergfx.png');
+    background-size:cover;
+    color:rgb(241,241,241);
+    text-align: right;
+}
+
 .nav-wrapper{
     grid-area: nav;
     background-color:rgb(64, 66, 69);
@@ -42,11 +52,31 @@ html{
     font-size:0.95em;
 }
 
-.header-wrapper{
-    grid-area: header;
-    background-image:url('./supergfx.png');
-    background-size:cover;
+.logo-wrapper{
+    margin: 1em;
 }
+
+.logo{
+   width:100%;
+}
+
+.link{
+    cursor:pointer;
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.link:hover{
+    background-color: rgb(128,130,133);
+    width: 100%;
+}
+
+a{
+    color: rgb(241,241,241);
+    text-decoration: none;
+}
+
 .content-wrapper{
     grid-area: content;
     border: 5px dotted pink;
@@ -66,45 +96,24 @@ html{
     border: 3px dotted red;
 }
 
-.inner-grid-box{
-    border: 2px dotted darkblue;
-    margin: 0.5em;
-   
-}
-
 .inner-grid-header{
     grid-area: inner-header;
     border: 3px dotted;
     margin: 0.5em;
 }
+
 header{
     text-align: center;
     color: rgb(64,66,69);
     font-family: BoschBlack;
 }
 
-.link{
-    cursor:pointer;
-    width: 100%;
-    padding-top: 1em;
-    padding-bottom: 1em;
-}
-.link:hover{
-    background-color: rgb(128,130,133);
-    width: 100%;
+.inner-grid-box{
+    border: 2px dotted darkblue;
+    margin: 0.5em;
+   
 }
 
-
-a{
-    color: rgb(241,241,241);
-    text-decoration: none;
-}
-.logo-wrapper{
-    margin: 1em;
-}
-.logo{
-   width:100%;
-}
 .content-header{
     border: 1px dotted blue;
     text-align: center;
@@ -117,16 +126,6 @@ a{
     border: 4px dotted green;
     background-color: beige;
     margin: 1em;
-}
-
-.inner-grid-header{
-    margin-top: 0.25em;
-}
-
-.header-wrapper{
-    color:rgb(241,241,241);
-    text-align: right;
-    
 }
 
 #date{
