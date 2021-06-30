@@ -12,115 +12,18 @@
 }
 html{
     font-family: BoschSans;
-    color: rgb(64,66,69);
+}
+html, body{
     height: 100%;
 }
 
-.app{
-    position: absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
+body{
     display: grid;
-    grid-template-rows: min-content auto;
     grid-template-areas: 
-        "header"
-        "main";
-}
-
-.grid{
-    display:grid;
-    grid-template-columns: 1fr 8fr;
-    grid-template-areas: 
-        "nav content";
-    grid-area: main;
-}
-
-.header-wrapper{
-    grid-area: header;
-    background-image:url('./supergfx.png');
-    background-size:cover;
-    color:rgb(241,241,241);
-    text-align: right;
-}
-
-.nav-wrapper{
-    grid-area: nav;
-    background-color:rgb(64, 66, 69);
-    text-align: center;
-    font-size:0.95em;
-}
-
-.logo-wrapper{
-    margin: 1em;
-}
-
-.logo{
-   width:100%;
-}
-
-.link{
-    cursor:pointer;
-    width: 100%;
-    padding-top: 1em;
-    padding-bottom: 1em;
-}
-
-.link:hover{
-    background-color: rgb(128,130,133);
-    width: 100%;
-}
-
-a{
-    color: rgb(241,241,241);
-    text-decoration: none;
-}
-
-.content-wrapper{
-    grid-area: content;
-
-
-    
-}
-.inner-grid{
-    display:grid;
-    grid-template-rows: min-content auto auto;
-    grid-template-areas: 
-    "inner-header inner-header inner-header"
-    "box box box"
-    "box box box"
-    "box box box";
-    margin: 1em;
-    align-items: center;
-}
-
-.inner-grid-header{
-    grid-area: inner-header;
-    
+        "header header"
+        "nav main";
 }
 
 header{
-    text-align: center;
-    color: rgb(64,66,69);
-    font-family: BoschBlack;
+    
 }
-
-.inner-grid-box{
-    background-color:rgb(195,195,196);
-    margin: 0.5em;
-    border:1px solid rgb(64, 66, 69)
-}
-
-.content-header{
-    text-align: center;
-    background-color: rgb(64, 66, 69);
-    color:rgb(241,241,241);
-    padding: 0.25em;
-    font-family: BoschBold;
-}
-.content-main{
-    background-color: rgb(241,241,241);
-    margin: 1em;
-}
-
