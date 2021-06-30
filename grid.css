@@ -22,7 +22,7 @@ body{
     grid-template-areas: 
         "header header"
         "nav main";
-    grid-template-rows: min-content auto;
+    grid-template-rows: 1em auto;
     grid-template-columns: 10% auto;
     border: 1px solid black;
     margin: 0;
@@ -71,4 +71,20 @@ h3{
 
 article{
     border: 2px dotted pink;
+}
+
+a{
+    color: rgb(225,225,226);
+    text-decoration: none;
+}
+
+.link:hover{
+    background-color: rgb(128, 130, 133);
+    cursor: pointer;
+}
+
+.link{
+    text-align: center;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
