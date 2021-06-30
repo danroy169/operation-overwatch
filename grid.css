@@ -79,7 +79,7 @@ a{
 
 .content-wrapper{
     grid-area: content;
-    border: 5px dotted pink;
+
 
     
 }
@@ -94,13 +94,11 @@ a{
     "box box box";
     margin: 1em;
     align-items: center;
-    border: 3px dotted red;
 }
 
 .inner-grid-header{
     grid-area: inner-header;
-    border: 3px dotted;
-    margin: 0.5em;
+    
 }
 
 header{
@@ -110,9 +108,9 @@ header{
 }
 
 .inner-grid-box{
-    border: 2px solid  rgb(64, 66, 69);
     background-color:rgb(195,195,196);
-   margin: 0.5em;
+    margin: 0.5em;
+    border:1px solid rgb(64, 66, 69)
 }
 
 .content-header{
