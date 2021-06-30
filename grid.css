@@ -25,6 +25,7 @@ body{
     grid-template-rows: min-content auto;
     grid-template-columns: 10% auto;
     border: 1px solid black;
+    margin: 0;
     
 }
 
@@ -33,6 +34,7 @@ header{
     text-align: center;
     border: 1px dotted blue;
     background-image: url('./supergfx.png');
+    background-size:cover;
     
 }
 
