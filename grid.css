@@ -47,10 +47,28 @@ nav{
 main{
     grid-area: main;
     border: 1px dotted green;
+    display: grid;
+    grid-template-areas: 
+        "title title"
+        "content content"
+        "content content"
+        "content content";
+    grid-template-rows: min-content auto auto auto;
 }
 
 #logo{
     width: 95%;
     margin-left: 0.25em;
     margin-top: 0.25em;
+}
+
+h3{
+    grid-area: title;
+    text-align: center;
+    border: 2px dotted brown;
+    margin: 0;
+}
+
+article{
+    border: 2px dotted pink;
 }
