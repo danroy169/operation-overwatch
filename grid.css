@@ -41,9 +41,16 @@ header{
 nav{
     grid-area: nav;
     border: 1px dotted red;
+    background-color:rgb(64, 66, 69);
 }
 
 main{
     grid-area: main;
     border: 1px dotted green;
+}
+
+#logo{
+    width: 95%;
+    margin-left: 0.25em;
+    margin-top: 0.25em;
 }
