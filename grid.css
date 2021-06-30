@@ -22,8 +22,23 @@ body{
     grid-template-areas: 
         "header header"
         "nav main";
+    grid-template-rows: min-content auto;
+    grid-template-columns: 10% auto;
+    border: 1px solid black;
 }
 
 header{
-    
+    grid-area: header;
+    text-align: center;
+    border: 1px dotted blue;
+}
+
+nav{
+    grid-area: nav;
+    border: 1px dotted red;
+}
+
+main{
+    grid-area: main;
+    border: 1px dotted green;
 }
