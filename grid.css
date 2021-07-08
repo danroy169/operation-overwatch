@@ -26,6 +26,7 @@ body{
     grid-template-columns: 10% auto;
     border: 1px solid black;
     margin: 0;
+    background-color: rgb(225,225,226);
     
 }
 
@@ -49,11 +50,14 @@ main{
     border: 1px dotted green;
     display: grid;
     grid-template-areas: 
-        "title title"
-        "content content"
-        "content content"
-        "content content";
-    grid-template-rows: min-content auto auto auto;
+        "title"
+        "content";
+    grid-template-rows: min-content auto;
+}
+
+.content{
+    grid-area: content;
+    border: 3px dotted darkgoldenrod;
 }
 
 #logo{
@@ -70,10 +74,6 @@ h3{
     font-family: BoschBold;
 }
 
-article{
-    border: 2px dotted pink;
-}
-
 a{
     color: rgb(225,225,226);
     text-decoration: none;
@@ -88,4 +88,16 @@ a{
     text-align: center;
     margin-top: 1em;
     margin-bottom: 1em;
+}
+
+table{
+    width: 50%;
+    border-collapse: collapse;
+}
+th{
+    text-align: left;
+}
+table, th, td{
+    border: 2px solid rgb(64, 66, 69);
+    background-color: rgb(241, 241,241);
 }
