@@ -24,7 +24,6 @@ body{
         "nav main";
     grid-template-rows: 1em auto;
     grid-template-columns: 10% auto;
-    border: 1px solid black;
     margin: 0;
     background-color: rgb(225,225,226);
     
@@ -33,7 +32,6 @@ body{
 header{
     grid-area: header;
     text-align: center;
-    border: 1px dotted blue;
     background-image: url('./supergfx.png');
     background-size:cover;
     
@@ -41,7 +39,6 @@ header{
 
 nav{
     grid-area: nav;
-    border: 1px dotted red;
     background-color:rgb(64, 66, 69);
 }
 
@@ -57,7 +54,6 @@ main{
 
 .content{
     grid-area: content;
-    border: 3px dotted darkgoldenrod;
 }
 
 #logo{
@@ -66,12 +62,10 @@ main{
     margin-top: 0.25em;
 }
 
-h3{
+h1{
     grid-area: title;
     text-align: center;
-    border: 2px dotted brown;
     margin: 0;
-    font-family: BoschBold;
 }
 
 a{
@@ -93,6 +87,7 @@ a{
 table{
     width: 50%;
     border-collapse: collapse;
+    margin: 1em;
 }
 th{
     text-align: left;

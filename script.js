@@ -1,12 +1,46 @@
 
-const table = document.getElementById("table")
 
-async function populateTable(){
-    const data = await getDevicesOnline()
-    console.log(data)
-    populateDeviceHeaders()
-    populateDeviceTable(data)
+function init(){
+    
 
+    document.getElementById("devicesOnline").addEventListener("click", devicesOnline)
+    document.getElementById("adasCalibrations").addEventListener("click", adasCalibrations)
+    document.getElementById("runningScans").addEventListener("click", runningScans)
+    document.getElementById("vehicleSessions").addEventListener("click", vehicleSessions)
+    document.getElementById("specialTests").addEventListener("click", specialTests)
+}
+
+
+
+
+
+
+async function devicesOnline(){
+    const table = document.getElementById("table")
+    try{
+        const data = await getDevicesOnline()
+        console.log(data)
+        populateDeviceHeaders()
+        populateDeviceTable(data)
+    } catch(err){
+        table.innerHTML = err
+    }
+}
+
+async function adasCalibrations(){
+    table.innerHTML = ''
+}
+
+async function runningScans(){
+    table.innerHTML = ''
+}
+
+async function vehicleSessions(){
+    table.innerHTML = ''
+}
+
+async function specialTests(){
+    table.innerHTML = ''
 }
 
 function populateDeviceHeaders(){
@@ -40,8 +74,11 @@ function populateDeviceTable(data){
 
 async function getDevicesOnline(){
     const request = await fetch('http://localhost:8080/devices-online')
+    console.log(request)
+    if(request.status !== 200) { throw new Error('Data not found') }
     const response = await request.json()
     return response
 }
 
-populateTable()
+if(document.readyState === 'loading') { window.addEventListener('DOMContentLoaded', event => init()) }
+else { init() }
