@@ -1,0 +1,26 @@
+{
+    "root": true,
+    "extends": "eslint:recommended",
+    "env": {
+        "node": true,
+        "es6": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 2020,
+        "sourceType": "module"
+    },
+    "rules": {
+        "semi": [
+            "error",
+            "never"
+        ],
+        "quotes": [
+            "warn",
+            "single"
+        ],
+        "no-console": "off",
+        "no-multi-spaces": "error",
+        "block-spacing": "error",
+        "brace-style": ["error", "stroustrup", { "allowSingleLine": true }]
+    }
+}

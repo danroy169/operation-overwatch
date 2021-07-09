@@ -1,0 +1,23 @@
+{
+  "name": "operation-overwatch",
+  "version": "1.0.0",
+  "description": "IAM Diagnostics Dashboard",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danroy169/operation-overwatch.git"
+  },
+  "author": "Daniel Roy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danroy169/operation-overwatch/issues"
+  },
+  "homepage": "https://github.com/danroy169/operation-overwatch#readme",
+  "dependencies": {
+    "eslint": "^7.30.0"
+  }
+}

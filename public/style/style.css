@@ -40,7 +40,6 @@ nav{
 }
 main{
     grid-area: main;
-    border: 1px dotted green;
     display: grid;
     grid-template-areas: 
         "title"
@@ -53,7 +52,7 @@ main{
 #logo{
     width: 95%;
     margin-left: 0.25em;
-    margin-top: 0.25em;
+    margin-top: 0.5em;
 }
 
 h1{
@@ -82,4 +81,16 @@ th{
 table, th, td{
     border: 2px solid rgb(64, 66, 69);
     background-color: rgb(241, 241,241);
+}
+#timeLinks{
+    text-align: center;
+    margin: 1em;
+}
+a{
+    margin: 1em;
+    color: rgb(0,59,106);
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(0,20,42)
 }

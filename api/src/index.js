@@ -2,9 +2,6 @@ import express from 'express'
 
 const app = express()
 
-
-
-
 app.listen(8080, () => { console.log('Listening at http://localhost:8080') })
 
 app.get('/devices-online', (req, res) => {

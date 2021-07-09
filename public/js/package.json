@@ -1,20 +1,16 @@
 {
-  "name": "api",
+  "name": "public-js",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "adas-calibrations.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint ."
   },
   "eslintConfig": {
-    "extends": "./.esLint.json"
+    "extends": "../../.esLint.json"
   },
-  "type": "module",
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "eslint": "^7.30.0",
-    "express": "^4.17.1"
-  }
+  "license": "ISC"
 }
