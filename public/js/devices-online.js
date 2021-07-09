@@ -1,5 +1,6 @@
+const table = document.getElementById('table')
+
 export async function devicesOnline(){
-    const table = document.getElementById('table')
     const links = document.getElementById('timeLinks')
     links.innerHTML = ''
     table.innerHTML = ''
@@ -7,7 +8,8 @@ export async function devicesOnline(){
         const data = await getDevicesOnline()
         populateDeviceHeaders()
         populateDeviceTable(data)
-    } catch(err){
+    } 
+    catch(err){
         table.innerHTML = err
     }
 }
