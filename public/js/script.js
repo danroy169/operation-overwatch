@@ -1,8 +1,4 @@
-
-
 function init(){
-    
-
     document.getElementById("devicesOnline").addEventListener("click", devicesOnline)
     document.getElementById("adasCalibrations").addEventListener("click", adasCalibrations)
     document.getElementById("runningScans").addEventListener("click", runningScans)
@@ -10,16 +6,11 @@ function init(){
     document.getElementById("specialTests").addEventListener("click", specialTests)
 }
 
-
-
-
-
-
 async function devicesOnline(){
     const table = document.getElementById("table")
     try{
         const data = await getDevicesOnline()
-        console.log(data)
+        table.innerHTML = ''
         populateDeviceHeaders()
         populateDeviceTable(data)
     } catch(err){

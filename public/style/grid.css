@@ -1,14 +1,14 @@
 @font-face{
     font-family: BoschBold;
-    src:url('./BoschSans-Bold.woff')
+    src:url('../util/fonts/BoschSans-Bold.woff')
 }
 @font-face{
     font-family: BoschSans;
-    src:url('./BoschSans-Regular.woff')
+    src:url('../util/fonts/BoschSans-Regular.woff')
 }
 @font-face{
     font-family: BoschBlack;
-    src:url('./BoschSans-Black.woff')
+    src:url('../util/fonts/BoschSans-Black.woff')
 }
 html{
     font-family: BoschSans;
@@ -16,7 +16,6 @@ html{
 html, body{
     height: 100%;
 }
-
 body{
     display: grid;
     grid-template-areas: 
@@ -28,20 +27,17 @@ body{
     background-color: rgb(225,225,226);
     
 }
-
 header{
     grid-area: header;
     text-align: center;
-    background-image: url('./supergfx.png');
+    background-image: url('../images/supergfx.png');
     background-size:cover;
     
 }
-
 nav{
     grid-area: nav;
     background-color:rgb(64, 66, 69);
 }
-
 main{
     grid-area: main;
     border: 1px dotted green;
@@ -51,11 +47,9 @@ main{
         "content";
     grid-template-rows: min-content auto;
 }
-
 .content{
     grid-area: content;
 }
-
 #logo{
     width: 95%;
     margin-left: 0.25em;
@@ -67,23 +61,16 @@ h1{
     text-align: center;
     margin: 0;
 }
-
-a{
-    color: rgb(225,225,226);
-    text-decoration: none;
-}
-
 .link:hover{
     background-color: rgb(128, 130, 133);
     cursor: pointer;
 }
-
 .link{
     text-align: center;
     margin-top: 1em;
     margin-bottom: 1em;
+    color: rgb(225,225,226);
 }
-
 table{
     width: 50%;
     border-collapse: collapse;
