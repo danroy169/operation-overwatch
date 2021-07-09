@@ -48,6 +48,7 @@ main{
 }
 .content{
     grid-area: content;
+    justify-self: center;
 }
 #logo{
     width: 95%;
@@ -71,16 +72,20 @@ h1{
     color: rgb(225,225,226);
 }
 table{
-    width: 50%;
+    width: 100%;
     border-collapse: collapse;
     margin: 1em;
 }
 th{
-    text-align: left;
+    text-align: center;
+    background-color: rgb(64, 66, 69);
+    color: rgb(225,225,226);
+    
 }
-table, th, td{
+table, td{
     border: 2px solid rgb(64, 66, 69);
     background-color: rgb(241, 241,241);
+    text-align: center;
 }
 #timeLinks{
     text-align: center;

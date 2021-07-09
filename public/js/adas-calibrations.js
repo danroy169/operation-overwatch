@@ -1,4 +1,4 @@
-import { displayLinks } from './display-links.js'
+import { displayLinks } from './util.js'
 
 export async function adasCalibrations(){
     const div = document.getElementById('timeLinks')

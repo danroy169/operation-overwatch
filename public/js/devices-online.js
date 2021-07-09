@@ -1,3 +1,4 @@
+import { populateNumberByPlatformTable } from './util.js'
 const table = document.getElementById('table')
 
 export async function devicesOnline(){
@@ -7,25 +8,10 @@ export async function devicesOnline(){
     try{
         const data = await getDevicesOnline()
         populateDeviceHeaders()
-        populateDeviceTable(data)
+        populateNumberByPlatformTable(data, table)
     } 
     catch(err){
         table.innerHTML = err
-    }
-}
-
-function populateDeviceTable(data){
-    for (const property in data){
-        const row = document.createElement('tr')
-        const platform = document.createElement('td')
-        const devicesOnline = document.createElement('td')
-
-        platform.innerHTML = property
-        devicesOnline.innerHTML = data[property]
-
-        row.appendChild(platform)
-        row.appendChild(devicesOnline)
-        table.appendChild(row)
     }
 }
 
@@ -38,16 +24,19 @@ async function getDevicesOnline(){
 
 function populateDeviceHeaders(){
     const table = document.getElementById('table')
+    const caption = document.createElement('caption')
     const headRow = document.createElement('tr')
     const devicesHeader = document.createElement('th')
     const platformHeader = document.createElement('th')
 
-    devicesHeader.innerHTML = 'Platform'
+    caption.innerHTML = 'Devices Online by Platform / Brand'
+    devicesHeader.innerHTML = 'Platform / Brand'
     platformHeader.innerHTML = 'Devices Online'
 
     headRow.appendChild(devicesHeader)
     headRow.appendChild(platformHeader)
 
+    table.append(caption)
     table.appendChild(headRow)
 }
 
