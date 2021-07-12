@@ -2,493 +2,349 @@
  {
    "YEAR": 2021,
    "MONTH": 7,
-   "product": "Encore",
-   "Count": 70552
+   "REPORTTYPE": "SCANREPORT",
+   "Count": 105798
  },
  {
    "YEAR": 2021,
    "MONTH": 7,
-   "product": "DVCI",
-   "Count": 19509
- },
- {
-   "YEAR": 2021,
-   "MONTH": 7,
-   "product": "MPP_2018",
-   "Count": 4819
+   "REPORTTYPE": "CALIBRATIONREPORT",
+   "Count": 59919
  },
  {
    "YEAR": 2021,
    "MONTH": 6,
-   "product": "Encore",
-   "Count": 329897
+   "REPORTTYPE": "SCANREPORT",
+   "Count": 395972
  },
  {
    "YEAR": 2021,
    "MONTH": 6,
-   "product": "DVCI",
-   "Count": 54381
+   "REPORTTYPE": "CALIBRATIONREPORT",
+   "Count": 216558
  },
  {
    "YEAR": 2021,
    "MONTH": 6,
-   "product": "MPP_2018",
-   "Count": 23573
+   "REPORTTYPE": "COMPLETIONREPORT",
+   "Count": 8
  },
  {
    "YEAR": 2021,
    "MONTH": 5,
-   "product": "Encore",
-   "Count": 304208
+   "REPORTTYPE": "SCANREPORT",
+   "Count": 348523
  },
  {
    "YEAR": 2021,
    "MONTH": 5,
-   "product": "DVCI",
-   "Count": 23874
+   "REPORTTYPE": "CALIBRATIONREPORT",
+   "Count": 190524
  },
  {
    "YEAR": 2021,
    "MONTH": 5,
-   "product": "MPP_2018",
-   "Count": 22893
+   "REPORTTYPE": "COMPLETIONREPORT",
+   "Count": 15
  },
  {
    "YEAR": 2021,
    "MONTH": 4,
-   "product": "Encore",
-   "Count": 313122
+   "REPORTTYPE": "SCANREPORT",
+   "Count": 336653
  },
  {
    "YEAR": 2021,
    "MONTH": 4,
-   "product": "MPP_2018",
-   "Count": 27277
+   "REPORTTYPE": "CALIBRATIONREPORT",
+   "Count": 174115
  },
  {
    "YEAR": 2021,
    "MONTH": 4,
-   "product": "DVCI",
-   "Count": 11131
+   "REPORTTYPE": "COMPLETIONREPORT",
+   "Count": 18
  },
  {
    "YEAR": 2021,
    "MONTH": 3,
-   "product": "Encore",
-   "Count": 335605
+   "REPORTTYPE": "SCANREPORT",
+   "Count": 321804
  },
  {
    "YEAR": 2021,
    "MONTH": 3,
-   "product": "MPP_2018",
-   "Count": 30483
+   "REPORTTYPE": "CALIBRATIONREPORT",
+   "Count": 156622
  },
  {
    "YEAR": 2021,
    "MONTH": 3,
-   "product": "DVCI",
-   "Count": 9046
+   "REPORTTYPE": "COMPLETIONREPORT",
+   "Count": 15
  },
  {
    "YEAR": 2021,
    "MONTH": 2,
-   "product": "Encore",
-   "Count": 272789
+   "REPORTTYPE": "SCANREPORT",
+   "Count": 236194
  },
  {
    "YEAR": 2021,
    "MONTH": 2,
-   "product": "MPP_2018",
-   "Count": 25471
+   "REPORTTYPE": "CALIBRATIONREPORT",
+   "Count": 105083
  },
  {
    "YEAR": 2021,
    "MONTH": 2,
-   "product": "DVCI",
-   "Count": 6842
+   "REPORTTYPE": "COMPLETIONREPORT",
+   "Count": 5
  },
  {
    "YEAR": 2021,
    "MONTH": 1,
-   "product": "Encore",
-   "Count": 280464
+   "REPORTTYPE": "SCANREPORT",
+   "Count": 235183
  },
  {
    "YEAR": 2021,
    "MONTH": 1,
-   "product": "MPP_2018",
-   "Count": 25836
- },
- {
-   "YEAR": 2021,
-   "MONTH": 1,
-   "product": "DVCI",
-   "Count": 4876
+   "REPORTTYPE": "CALIBRATIONREPORT",
+   "Count": 98698
  },
  {
    "YEAR": 2020,
    "MONTH": 12,
-   "product": "Encore",
-   "Count": 251194
+   "REPORTTYPE": "SCANREPORT",
+   "Count": 214972
  },
  {
    "YEAR": 2020,
    "MONTH": 12,
-   "product": "MPP_2018",
-   "Count": 22941
+   "REPORTTYPE": "CALIBRATIONREPORT",
+   "Count": 92329
  },
  {
    "YEAR": 2020,
    "MONTH": 12,
-   "product": "DVCI",
-   "Count": 3153
+   "REPORTTYPE": "COMPLETIONREPORT",
+   "Count": 1
  },
  {
    "YEAR": 2020,
    "MONTH": 11,
-   "product": "Encore",
-   "Count": 246178
+   "REPORTTYPE": "SCANREPORT",
+   "Count": 206686
  },
  {
    "YEAR": 2020,
    "MONTH": 11,
-   "product": "MPP_2018",
-   "Count": 21667
- },
- {
-   "YEAR": 2020,
-   "MONTH": 11,
-   "product": "DVCI",
-   "Count": 2321
+   "REPORTTYPE": "CALIBRATIONREPORT",
+   "Count": 91890
  },
  {
    "YEAR": 2020,
    "MONTH": 10,
-   "product": "Encore",
-   "Count": 287498
+   "REPORTTYPE": "SCANREPORT",
+   "Count": 242297
  },
  {
    "YEAR": 2020,
    "MONTH": 10,
-   "product": "MPP_2018",
-   "Count": 23961
- },
- {
-   "YEAR": 2020,
-   "MONTH": 10,
-   "product": "DVCI",
-   "Count": 1690
+   "REPORTTYPE": "CALIBRATIONREPORT",
+   "Count": 114814
  },
  {
    "YEAR": 2020,
    "MONTH": 9,
-   "product": "Encore",
-   "Count": 295368
+   "REPORTTYPE": "SCANREPORT",
+   "Count": 245955
  },
  {
    "YEAR": 2020,
    "MONTH": 9,
-   "product": "MPP_2018",
-   "Count": 22235
- },
- {
-   "YEAR": 2020,
-   "MONTH": 9,
-   "product": "DVCI",
-   "Count": 1262
+   "REPORTTYPE": "CALIBRATIONREPORT",
+   "Count": 121447
  },
  {
    "YEAR": 2020,
    "MONTH": 8,
-   "product": "Encore",
-   "Count": 306240
+   "REPORTTYPE": "SCANREPORT",
+   "Count": 253182
  },
  {
    "YEAR": 2020,
    "MONTH": 8,
-   "product": "MPP_2018",
-   "Count": 22303
- },
- {
-   "YEAR": 2020,
-   "MONTH": 8,
-   "product": "DVCI",
-   "Count": 1085
+   "REPORTTYPE": "CALIBRATIONREPORT",
+   "Count": 140668
  },
  {
    "YEAR": 2020,
    "MONTH": 7,
-   "product": "Encore",
-   "Count": 318454
+   "REPORTTYPE": "SCANREPORT",
+   "Count": 176363
  },
  {
    "YEAR": 2020,
    "MONTH": 7,
-   "product": "MPP_2018",
-   "Count": 22076
- },
- {
-   "YEAR": 2020,
-   "MONTH": 7,
-   "product": "DVCI",
-   "Count": 1020
+   "REPORTTYPE": "CALIBRATIONREPORT",
+   "Count": 170826
  },
  {
    "YEAR": 2020,
    "MONTH": 6,
-   "product": "Encore",
-   "Count": 312534
+   "REPORTTYPE": "SCANREPORT",
+   "Count": 159243
  },
  {
    "YEAR": 2020,
    "MONTH": 6,
-   "product": "MPP_2018",
-   "Count": 21658
- },
- {
-   "YEAR": 2020,
-   "MONTH": 6,
-   "product": "DVCI",
-   "Count": 973
+   "REPORTTYPE": "CALIBRATIONREPORT",
+   "Count": 157584
  },
  {
    "YEAR": 2020,
    "MONTH": 5,
-   "product": "Encore",
-   "Count": 255029
+   "REPORTTYPE": "CALIBRATIONREPORT",
+   "Count": 118322
  },
  {
    "YEAR": 2020,
    "MONTH": 5,
-   "product": "MPP_2018",
-   "Count": 18878
- },
- {
-   "YEAR": 2020,
-   "MONTH": 5,
-   "product": "DVCI",
-   "Count": 441
+   "REPORTTYPE": "SCANREPORT",
+   "Count": 112247
  },
  {
    "YEAR": 2020,
    "MONTH": 4,
-   "product": "Encore",
-   "Count": 209355
+   "REPORTTYPE": "SCANREPORT",
+   "Count": 75968
  },
  {
    "YEAR": 2020,
    "MONTH": 4,
-   "product": "MPP_2018",
-   "Count": 17162
- },
- {
-   "YEAR": 2020,
-   "MONTH": 4,
-   "product": "DVCI",
-   "Count": 41
+   "REPORTTYPE": "CALIBRATIONREPORT",
+   "Count": 58966
  },
  {
    "YEAR": 2020,
    "MONTH": 3,
-   "product": "Encore",
-   "Count": 277176
+   "REPORTTYPE": "SCANREPORT",
+   "Count": 93045
  },
  {
    "YEAR": 2020,
    "MONTH": 3,
-   "product": "MPP_2018",
-   "Count": 21014
- },
- {
-   "YEAR": 2020,
-   "MONTH": 3,
-   "product": "DVCI",
-   "Count": 23
+   "REPORTTYPE": "CALIBRATIONREPORT",
+   "Count": 83995
  },
  {
    "YEAR": 2020,
    "MONTH": 2,
-   "product": "Encore",
-   "Count": 282027
+   "REPORTTYPE": "CALIBRATIONREPORT",
+   "Count": 86574
  },
  {
    "YEAR": 2020,
    "MONTH": 2,
-   "product": "MPP_2018",
-   "Count": 19971
- },
- {
-   "YEAR": 2020,
-   "MONTH": 2,
-   "product": "DVCI",
-   "Count": 439
+   "REPORTTYPE": "SCANREPORT",
+   "Count": 84356
  },
  {
    "YEAR": 2020,
    "MONTH": 1,
-   "product": "Encore",
-   "Count": 307144
+   "REPORTTYPE": "CALIBRATIONREPORT",
+   "Count": 87029
  },
  {
    "YEAR": 2020,
    "MONTH": 1,
-   "product": "MPP_2018",
-   "Count": 19891
- },
- {
-   "YEAR": 2020,
-   "MONTH": 1,
-   "product": "DVCI",
-   "Count": 365
+   "REPORTTYPE": "SCANREPORT",
+   "Count": 82335
  },
  {
    "YEAR": 2019,
    "MONTH": 12,
-   "product": "Encore",
-   "Count": 261712
+   "REPORTTYPE": "CALIBRATIONREPORT",
+   "Count": 68617
  },
  {
    "YEAR": 2019,
    "MONTH": 12,
-   "product": "MPP_2018",
-   "Count": 17134
- },
- {
-   "YEAR": 2019,
-   "MONTH": 12,
-   "product": "DVCI",
-   "Count": 66
+   "REPORTTYPE": "SCANREPORT",
+   "Count": 62599
  },
  {
    "YEAR": 2019,
    "MONTH": 11,
-   "product": "Encore",
-   "Count": 264769
+   "REPORTTYPE": "CALIBRATIONREPORT",
+   "Count": 69574
  },
  {
    "YEAR": 2019,
    "MONTH": 11,
-   "product": "MPP_2018",
-   "Count": 16135
+   "REPORTTYPE": "SCANREPORT",
+   "Count": 60687
  },
  {
    "YEAR": 2019,
    "MONTH": 10,
-   "product": "Encore",
-   "Count": 296684
+   "REPORTTYPE": "CALIBRATIONREPORT",
+   "Count": 73672
  },
  {
    "YEAR": 2019,
    "MONTH": 10,
-   "product": "MPP_2018",
-   "Count": 17728
+   "REPORTTYPE": "SCANREPORT",
+   "Count": 58044
  },
  {
    "YEAR": 2019,
    "MONTH": 9,
-   "product": "Encore",
-   "Count": 267722
+   "REPORTTYPE": "CALIBRATIONREPORT",
+   "Count": 69179
  },
  {
    "YEAR": 2019,
    "MONTH": 9,
-   "product": "MPP_2018",
-   "Count": 15946
+   "REPORTTYPE": "SCANREPORT",
+   "Count": 48600
  },
  {
    "YEAR": 2019,
    "MONTH": 8,
-   "product": "Encore",
-   "Count": 296528
+   "REPORTTYPE": "CALIBRATIONREPORT",
+   "Count": 79664
  },
  {
    "YEAR": 2019,
    "MONTH": 8,
-   "product": "MPP_2018",
-   "Count": 16172
+   "REPORTTYPE": "SCANREPORT",
+   "Count": 53552
  },
  {
    "YEAR": 2019,
    "MONTH": 7,
-   "product": "Encore",
-   "Count": 291025
+   "REPORTTYPE": "CALIBRATIONREPORT",
+   "Count": 68602
  },
  {
    "YEAR": 2019,
    "MONTH": 7,
-   "product": "MPP_2018",
-   "Count": 15378
+   "REPORTTYPE": "SCANREPORT",
+   "Count": 45425
  },
  {
    "YEAR": 2019,
    "MONTH": 6,
-   "product": "Encore",
-   "Count": 269461
+   "REPORTTYPE": "CALIBRATIONREPORT",
+   "Count": 16156
  },
  {
    "YEAR": 2019,
    "MONTH": 6,
-   "product": "MPP_2018",
-   "Count": 14085
- },
- {
-   "YEAR": 2019,
-   "MONTH": 5,
-   "product": "Encore",
-   "Count": 277787
- },
- {
-   "YEAR": 2019,
-   "MONTH": 5,
-   "product": "MPP_2018",
-   "Count": 14336
- },
- {
-   "YEAR": 2019,
-   "MONTH": 4,
-   "product": "Encore",
-   "Count": 268225
- },
- {
-   "YEAR": 2019,
-   "MONTH": 4,
-   "product": "MPP_2018",
-   "Count": 13622
- },
- {
-   "YEAR": 2019,
-   "MONTH": 3,
-   "product": "Encore",
-   "Count": 265872
- },
- {
-   "YEAR": 2019,
-   "MONTH": 3,
-   "product": "MPP_2018",
-   "Count": 12232
- },
- {
-   "YEAR": 2019,
-   "MONTH": 2,
-   "product": "Encore",
-   "Count": 238575
- },
- {
-   "YEAR": 2019,
-   "MONTH": 2,
-   "product": "MPP_2018",
-   "Count": 9662
- },
- {
-   "YEAR": 2019,
-   "MONTH": 1,
-   "product": "Encore",
-   "Count": 249503
- },
- {
-   "YEAR": 2019,
-   "MONTH": 1,
-   "product": "MPP_2018",
-   "Count": 9459
+   "REPORTTYPE": "SCANREPORT",
+   "Count": 11238
  }
 ]

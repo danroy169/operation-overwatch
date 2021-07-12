@@ -1,5 +1,4 @@
-
-const table = document.getElementById('table')
+const table = document.getElementById('table-year')
 
 export async function devicesOnline(){
     const links = document.getElementById('timeLinks')
@@ -8,7 +7,7 @@ export async function devicesOnline(){
     try{
         const data = await getDevicesOnline()
         populateDeviceHeaders()
-        populateNumberByPlatformTable(data, table)
+        populateTable(data)
     } 
     catch(err){
         table.innerHTML = err
@@ -22,23 +21,27 @@ async function getDevicesOnline(){
     return response
 }
 
-function populateNumberByPlatformTable(data, table){
-    for (const property in data){
+function populateTable(data){
+    for (const item in data){
+        if(data[item].UnitCount === 0) { continue }
+
         const row = document.createElement('tr')
-        const platform = document.createElement('td')
-        const number = document.createElement('td')
+        const product = document.createElement('td')
+        const brand = document.createElement('td')
+        const unitCount = document.createElement('td')
+   
+        product.innerHTML = data[item].Product
+        brand.innerHTML = data[item].Brand
+        unitCount.innerHTML = data[item].UnitCount.toLocaleString()
 
-        platform.innerHTML = property
-        number.innerHTML = data[property]
-
-        row.appendChild(platform)
-        row.appendChild(number)
+        row.appendChild(product)
+        row.appendChild(brand)
+        row.appendChild(unitCount)
         table.appendChild(row)
     }
 }
 
 function populateDeviceHeaders(){
-    const table = document.getElementById('table')
     const caption = document.createElement('caption')
     const headRow = document.createElement('tr')
     const devicesHeader = document.createElement('th')

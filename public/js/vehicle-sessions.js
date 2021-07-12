@@ -1,38 +1,81 @@
-import { fetchData, populateNumberByPlatformTable, displayLinks } from './util.js'
+import { populateCaptions } from './util.js'
 
-const table = document.getElementById('table')
+const tables = document.getElementsByTagName('table')
 
 export async function vehicleSessions() {
-    const div = document.getElementById('timeLinks')
-    const table = document.getElementById('table')
-    div.innerHTML = ''
-    table.innerHTML = ''
-    displayLinks()
+    for(let i=0; i<tables.length; i++){ tables[i].innerHTML = '' }
 
     try{
-        const data = await fetchData('http://localhost:8080/vehicle-sessions')
-        populateSessionsHeaders()
-        populateNumberByPlatformTable(data, table)
+        const year = await getData('year')
+        const month = await getData('month')
+        populateHeaders()
+        populateTable(year, month)
     }
     catch (err){
-        table.innerHTML = err
+        document.getElementById('table-year').innerHTML = err
     }
 
 }
 
-function populateSessionsHeaders(){
-    const caption = document.createElement('caption')
-    const headRow = document.createElement('tr')
-    const devicesHeader = document.createElement('th')
-    const platformHeader = document.createElement('th')
+async function getData(time){
+    const request = await fetch('http://localhost:8080/vehicle-sessions/' + time)
+    if(request.status !== 200) { throw new Error('Data not found') }
+    const response = await request.json()
+    return response
+}
 
-    caption.innerHTML = 'Vehicle Sessions by Platform / Brand'
-    devicesHeader.innerHTML = 'Platform / Brand'
-    platformHeader.innerHTML = 'Vehicle Sessions'
 
-    headRow.appendChild(devicesHeader)
-    headRow.appendChild(platformHeader)
+function populateHeaders(){
+    for(let i=0; i<tables.length; i++){
+        const headRow = document.createElement('tr')
 
-    table.append(caption)
-    table.appendChild(headRow)
+        const yearHeader = document.createElement('th')
+        const monthHeader = document.createElement('th')
+        const productHeader = document.createElement('th')
+        const countHeader = document.createElement('th')
+    
+        yearHeader.innerHTML = 'Year'
+        monthHeader.innerHTML = 'Month'
+        productHeader.innerHTML = 'Product'
+        countHeader.innerHTML = 'Count'
+    
+        headRow.appendChild(yearHeader)
+        headRow.appendChild(monthHeader)
+        headRow.appendChild(productHeader)
+        headRow.appendChild(countHeader)
+    
+        populateCaptions(tables[i])
+
+        tables[i].appendChild(headRow)
+    }
+}
+
+function populateTable(year, month){
+    for (let i=0; i<tables.length; i++){
+        if(tables[i].id === 'table-year'){ populateRows(year, tables[i]) }
+        if(tables[i].id === 'table-month'){ populateRows(month, tables[i]) }
+    }
+}
+
+function populateRows(data, table){
+    for (const item in data){
+        const row = document.createElement('tr')
+
+        const year = document.createElement('td')
+        const month = document.createElement('td')
+        const product = document.createElement('td')
+        const count = document.createElement('td')
+   
+        year.innerHTML = data[item].YEAR
+        month.innerHTML = data[item].MONTH
+        product.innerHTML = data[item].product
+        count.innerHTML = data[item].Count.toLocaleString()
+
+        row.appendChild(year)
+        row.appendChild(month)
+        row.appendChild(product)
+        row.appendChild(count)
+
+        table.appendChild(row)
+    }
 }

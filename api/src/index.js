@@ -16,15 +16,90 @@ app.get('/devices-online', (req, res) => {
         .then(obj => { res.json(obj) })
 })
 
-app.get('/vehicle-sessions', (req, res) => {
+app.get('/vehicle-sessions/year', (req, res) => {
     
     res.set({
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Credentials': true
     })
 
-    const vehicleSessions = {encore: 80040, evolve: 166800, safelite: 33355, mitchell: 84774, protech: 11881, belron: 46766, bosch: 1006600}
-    res.json(vehicleSessions)
+    read('../../Vehicle_Sessions.json')
+        .then(obj => { 
+            const filtered = obj.filter(item => { return item.YEAR === 2021 })
+            res.json(filtered)
+        })
+})
+
+app.get('/vehicle-sessions/month', (req, res) => {
+    
+    res.set({
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': true
+    })
+
+    read('../../Vehicle_Sessions.json')
+        .then(obj => { 
+            const filtered = obj.filter(item => { return item.MONTH === 7 })
+            res.json(filtered)
+        })
+})
+
+app.get('/calibrations/year', (req, res) => {
+
+    res.set({
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': true
+    })
+
+    read('../../Calibrations_and_Scans.json')
+        .then(obj => {
+            const filtered = obj.filter(item => { return item.REPORTTYPE === 'CALIBRATIONREPORT' && item.YEAR === 2021 })
+            res.json(filtered)
+        })
+})
+
+app.get('/calibrations/month', (req, res) => {
+
+    res.set({
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': true
+    })
+
+    read('../../Calibrations_and_Scans.json')
+        .then(obj => {
+            const filtered = obj.filter(item => { return item.REPORTTYPE === 'CALIBRATIONREPORT' && item.YEAR === 2021 && item.MONTH === 7 })
+            res.json(filtered)
+        })
+})
+
+app.get('/scans/year', (req, res) => {
+
+    res.set({
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': true
+    })
+
+    read('../../Calibrations_and_Scans.json')
+        .then(obj => {
+            const filtered = obj.filter(item => { return item.REPORTTYPE !== 'CALIBRATIONREPORT' && item.YEAR === 2021 })
+            res.json(filtered)
+        })
+
+})
+
+app.get('/scans/month', (req, res) => {
+
+    res.set({
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': true
+    })
+
+    read('../../Calibrations_and_Scans.json')
+        .then(obj => {
+            const filtered = obj.filter(item => { return item.REPORTTYPE !== 'CALIBRATIONREPORT' && item.YEAR === 2021 && item.MONTH === 7 })
+            res.json(filtered)
+        })
+
 })
 
 async function read(path){

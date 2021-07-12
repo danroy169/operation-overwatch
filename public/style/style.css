@@ -22,7 +22,7 @@ body{
         "header header"
         "nav main";
     grid-template-rows: 1em auto;
-    grid-template-columns: 10% auto;
+    grid-template-columns: 10em auto;
     margin: 0;
     background-color: rgb(225,225,226);
     
@@ -49,6 +49,7 @@ main{
 .content{
     grid-area: content;
     justify-self: center;
+    display: inline;
 }
 #logo{
     width: 95%;
@@ -72,7 +73,6 @@ h1{
     color: rgb(225,225,226);
 }
 table{
-    width: 100%;
     border-collapse: collapse;
     margin: 1em;
 }

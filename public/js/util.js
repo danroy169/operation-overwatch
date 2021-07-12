@@ -1,33 +1,27 @@
-export async function fetchData(path){
-    const request = await fetch(path)
-    if(request.status !== 200) { throw new Error('Data not found') }
-    const response = await request.json()
-    return response
-}
 
-// displays links for year/month/week/day for each necessary view
-export function displayLinks(){
-    const div = document.getElementById('timeLinks')
-    const year = document.createElement('a')
-    const month = document.createElement('a')
-    const week = document.createElement('a')
-    const day = document.createElement('a')
+export function populateCaptions(table){
+    const yearCaption = document.createElement('caption')
+    const monthCaption = document.createElement('caption')
+    const weekCaption = document.createElement('caption')
+    const dayCaption = document.createElement('caption')
 
-    year.innerText = 'Year'
-    month.innerText = 'Month'
-    week.innerText = 'Week'
-    day.innerText = 'Day'
+    yearCaption.innerHTML = 'This Year'
+    monthCaption.innerHTML = 'This Month'
+    weekCaption.innerHTML = 'This Week'
+    dayCaption.innerHTML = 'This Day'
 
-    year.id = 'year'
-    month.id = 'month'
-    week.id = 'week'
-    day.id = 'day'
-
-    div.appendChild(year)
-    div.appendChild(month)
-    div.appendChild(week)
-    div.appendChild(day)
-
-    const links = document.getElementsByTagName('a')
-    for(let i=0; i<links.length; i++) { links[i].setAttribute('href', '#') }
+    switch(table.id){
+        case 'table-year':
+            table.appendChild(yearCaption)
+            break
+        case 'table-month':
+            table.appendChild(monthCaption)
+            break        
+        case 'table-week':
+            table.appendChild(weekCaption)
+            break
+        case 'table-day':
+            table.appendChild(dayCaption)
+            break
+    }
 }
