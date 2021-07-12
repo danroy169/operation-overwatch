@@ -1,0 +1,332 @@
+[
+ {
+   "Product": "Encore",
+   "Brand": "OT",
+   "UnitCount": 10790
+ },
+ {
+   "Product": "Encore",
+   "Brand": "ET",
+   "UnitCount": 5654
+ },
+ {
+   "Product": "GT2",
+   "Brand": "ET",
+   "UnitCount": 5300
+ },
+ {
+   "Product": "Encore",
+   "Brand": "BK",
+   "UnitCount": 4823
+ },
+ {
+   "Product": "Encore",
+   "Brand": "SL",
+   "UnitCount": 3296
+ },
+ {
+   "Product": "DVCI",
+   "Brand": "GR",
+   "UnitCount": 3114
+ },
+ {
+   "Product": "GT2",
+   "Brand": "OT",
+   "UnitCount": 2948
+ },
+ {
+   "Product": "MPP_2018",
+   "Brand": "ET",
+   "UnitCount": 2557
+ },
+ {
+   "Product": "GT2",
+   "Brand": "GR",
+   "UnitCount": 1698
+ },
+ {
+   "Product": "GT2",
+   "Brand": "ML",
+   "UnitCount": 1453
+ },
+ {
+   "Product": "GT2",
+   "Brand": "BK",
+   "UnitCount": 1414
+ },
+ {
+   "Product": "DVCI",
+   "Brand": "HU",
+   "UnitCount": 1048
+ },
+ {
+   "Product": "DVCI",
+   "Brand": "SL",
+   "UnitCount": 791
+ },
+ {
+   "Product": "Encore",
+   "Brand": "CW",
+   "UnitCount": 718
+ },
+ {
+   "Product": "MPP_2018",
+   "Brand": "GR",
+   "UnitCount": 566
+ },
+ {
+   "Product": "DVCI",
+   "Brand": "ET",
+   "UnitCount": 507
+ },
+ {
+   "Product": "DVCI",
+   "Brand": "ML",
+   "UnitCount": 456
+ },
+ {
+   "Product": "Encore",
+   "Brand": "ML",
+   "UnitCount": 385
+ },
+ {
+   "Product": "Encore",
+   "Brand": "SF",
+   "UnitCount": 375
+ },
+ {
+   "Product": "Encore",
+   "Brand": "BL",
+   "UnitCount": 365
+ },
+ {
+   "Product": "Encore",
+   "Brand": "MD",
+   "UnitCount": 251
+ },
+ {
+   "Product": "GT2",
+   "Brand": "AD",
+   "UnitCount": 143
+ },
+ {
+   "Product": "Encore",
+   "Brand": "CA",
+   "UnitCount": 33
+ },
+ {
+   "Product": "GT2",
+   "Brand": "SS",
+   "UnitCount": 29
+ },
+ {
+   "Product": "Encore",
+   "Brand": "GR",
+   "UnitCount": 26
+ },
+ {
+   "Product": "DVCI",
+   "Brand": "PT",
+   "UnitCount": 25
+ },
+ {
+   "Product": "GT2",
+   "Brand": "SL",
+   "UnitCount": 23
+ },
+ {
+   "Product": "DVCI",
+   "Brand": "BL",
+   "UnitCount": 19
+ },
+ {
+   "Product": "Encore",
+   "Brand": "RD",
+   "UnitCount": 17
+ },
+ {
+   "Product": "DVCI",
+   "Brand": "AD",
+   "UnitCount": 16
+ },
+ {
+   "Product": "GT2",
+   "Brand": "CW",
+   "UnitCount": 14
+ },
+ {
+   "Product": "Encore",
+   "Brand": "SB",
+   "UnitCount": 8
+ },
+ {
+   "Product": "GT2",
+   "Brand": "RD",
+   "UnitCount": 7
+ },
+ {
+   "Product": "GT2",
+   "Brand": "MD",
+   "UnitCount": 5
+ },
+ {
+   "Product": "MPP_2018",
+   "Brand": "OT",
+   "UnitCount": 4
+ },
+ {
+   "Product": "Encore",
+   "Brand": "BF",
+   "UnitCount": 2
+ },
+ {
+   "Product": "Encore",
+   "Brand": "T-",
+   "UnitCount": 2
+ },
+ {
+   "Product": "Encore",
+   "Brand": "TT",
+   "UnitCount": 2
+ },
+ {
+   "Product": "Encore",
+   "Brand": "WA",
+   "UnitCount": 2
+ },
+ {
+   "Product": "GT2",
+   "Brand": "BL",
+   "UnitCount": 2
+ },
+ {
+   "Product": "GT2",
+   "Brand": "HU",
+   "UnitCount": 2
+ },
+ {
+   "Product": "MPP_2018",
+   "Brand": "ML",
+   "UnitCount": 2
+ },
+ {
+   "Product": "DVCI",
+   "Brand": "BK",
+   "UnitCount": 1
+ },
+ {
+   "Product": "DVCI",
+   "Brand": "GK",
+   "UnitCount": 1
+ },
+ {
+   "Product": "DVCI",
+   "Brand": "GT",
+   "UnitCount": 1
+ },
+ {
+   "Product": "DVCI",
+   "Brand": "MB",
+   "UnitCount": 1
+ },
+ {
+   "Product": "DVCI",
+   "Brand": "MM",
+   "UnitCount": 1
+ },
+ {
+   "Product": "DVCI",
+   "Brand": "RR",
+   "UnitCount": 1
+ },
+ {
+   "Product": "Encore",
+   "Brand": "1A",
+   "UnitCount": 1
+ },
+ {
+   "Product": "Encore",
+   "Brand": "8O",
+   "UnitCount": 1
+ },
+ {
+   "Product": "Encore",
+   "Brand": "AD",
+   "UnitCount": 1
+ },
+ {
+   "Product": "Encore",
+   "Brand": "bc",
+   "UnitCount": 1
+ },
+ {
+   "Product": "Encore",
+   "Brand": "HU",
+   "UnitCount": 1
+ },
+ {
+   "Product": "Encore",
+   "Brand": "ll",
+   "UnitCount": 1
+ },
+ {
+   "Product": "Encore",
+   "Brand": "NM",
+   "UnitCount": 1
+ },
+ {
+   "Product": "Encore",
+   "Brand": "OE",
+   "UnitCount": 1
+ },
+ {
+   "Product": "Encore",
+   "Brand": "T+",
+   "UnitCount": 1
+ },
+ {
+   "Product": "Encore",
+   "Brand": "ZZ",
+   "UnitCount": 1
+ },
+ {
+   "Product": "GT2",
+   "Brand": "CA",
+   "UnitCount": 1
+ },
+ {
+   "Product": "GT2",
+   "Brand": "SF",
+   "UnitCount": 1
+ },
+ {
+   "Product": "MPP_2018",
+   "Brand": "MD",
+   "UnitCount": 1
+ },
+ {
+   "Product": "MPP_2018",
+   "Brand": "SL",
+   "UnitCount": 1
+ },
+ {
+   "Product": "MPP_2018",
+   "Brand": "ZZ",
+   "UnitCount": 1
+ },
+ {
+   "Product": "Encore",
+   "Brand": null,
+   "UnitCount": 0
+ },
+ {
+   "Product": "GT2",
+   "Brand": null,
+   "UnitCount": 0
+ },
+ {
+   "Product": "MPP_2018",
+   "Brand": null,
+   "UnitCount": 0
+ }
+]

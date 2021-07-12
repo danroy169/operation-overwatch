@@ -1,21 +1,3 @@
-// used to populate two column table, Brand / Platform - Number
-// used for # of unique tools online by brand/platform,
-// and number of vehicle sessions by brand/platform
-export function populateNumberByPlatformTable(data, table){
-    for (const property in data){
-        const row = document.createElement('tr')
-        const platform = document.createElement('td')
-        const number = document.createElement('td')
-
-        platform.innerHTML = property
-        number.innerHTML = data[property]
-
-        row.appendChild(platform)
-        row.appendChild(number)
-        table.appendChild(row)
-    }
-}
-
 export async function fetchData(path){
     const request = await fetch(path)
     if(request.status !== 200) { throw new Error('Data not found') }

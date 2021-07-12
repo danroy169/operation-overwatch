@@ -1,4 +1,6 @@
 import express from 'express'
+import { readFile } from 'node:fs/promises'
+
 
 const app = express()
 
@@ -10,9 +12,8 @@ app.get('/devices-online', (req, res) => {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Credentials': true
     })
-
-    const devicesOnline = {encore: 800, evolve: 100, safelite: 333, mitchell: 844, protech: 111, belron: 456, bosch: 10000}
-    res.json(devicesOnline)
+    read('../../DevicePlatform_by_Brand.json')
+        .then(obj => { res.json(obj) })
 })
 
 app.get('/vehicle-sessions', (req, res) => {
@@ -25,3 +26,8 @@ app.get('/vehicle-sessions', (req, res) => {
     const vehicleSessions = {encore: 80040, evolve: 166800, safelite: 33355, mitchell: 84774, protech: 11881, belron: 46766, bosch: 1006600}
     res.json(vehicleSessions)
 })
+
+async function read(path){
+    const obj = await readFile(path)
+    return JSON.parse(obj)
+}
