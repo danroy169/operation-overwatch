@@ -39,7 +39,7 @@ app.get('/vehicle-sessions/month', (req, res) => {
 
     read('../../Vehicle_Sessions.json')
         .then(obj => { 
-            const filtered = obj.filter(item => { return item.MONTH === 7 })
+            const filtered = obj.filter(item => { return item.YEAR === 2021 && item.MONTH === 7 })
             res.json(filtered)
         })
 })
