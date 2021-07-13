@@ -32,3 +32,33 @@ export async function getData(path, time){
     const response = await request.json()
     return response
 }
+
+export function populateHeaders(tables, headers){
+    for(let i=0; i<tables.length; i++){ 
+        const headRow = document.createElement('tr')
+
+        for(const head in headers){
+            const element = document.createElement('th')
+            element.innerHTML = headers[head]
+            headRow.appendChild(element)
+        }
+
+        populateCaptions(tables[i])
+
+        tables[i].appendChild(headRow)
+     }
+}
+
+export function populateRows(data, table){
+    for (const item in data){
+        const row = document.createElement('tr')
+
+        for (const prop in data[item]){
+            const elem = document.createElement('td')
+            elem.innerHTML = data[item][prop]
+            row.appendChild(elem)
+        }
+
+        table.appendChild(row)
+    }
+}

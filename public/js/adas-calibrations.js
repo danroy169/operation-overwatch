@@ -1,43 +1,19 @@
-import { populateCaptions, getData } from './util.js'
+import { populateHeaders, getData } from './util.js'
 
 const tables = document.getElementsByTagName('table')
+const headers = ['Year', 'Month', 'Report Type', 'Count']
 
 export async function adasCalibrations(){
     for(let i=0; i<tables.length; i++){ tables[i].innerHTML = '' }
     try{
         const year = await getData('calibrations', 'year')
         const month = await getData('calibrations', 'month')
-        populateHeaders()
+        populateHeaders(tables, headers)
         populateTable(year, month)
     }
     catch(err){
         tables.innerHTML = err
     }
-}
-
-function populateHeaders(){
-    for(let i=0; i<tables.length; i++){ 
-        const headRow = document.createElement('tr')
-
-        const yeartHeader = document.createElement('th')
-        const monthHeader = document.createElement('th')
-        const reportHeader = document.createElement('th')
-        const countHeader = document.createElement('th')
-    
-        yeartHeader.innerHTML = 'Year'
-        monthHeader.innerHTML = 'Month'
-        reportHeader.innerHTML = 'Report Type'
-        countHeader.innerHTML = 'Count'
-
-        headRow.appendChild(yeartHeader)
-        headRow.appendChild(monthHeader)
-        headRow.appendChild(reportHeader)
-        headRow.appendChild(countHeader)
-
-        populateCaptions(tables[i])
-
-        tables[i].appendChild(headRow)
-     }
 }
 
 function populateTable(year, month){
