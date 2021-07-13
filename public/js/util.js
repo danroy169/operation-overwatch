@@ -55,7 +55,10 @@ export function populateRows(data, table){
 
         for (const prop in data[item]){
             const elem = document.createElement('td')
-            elem.innerHTML = data[item][prop]
+
+            if(prop === 'Count' || prop === 'UnitCount') { elem.innerHTML = data[item][prop].toLocaleString() }
+            else { elem.innerHTML = data[item][prop] }
+            
             row.appendChild(elem)
         }
 
