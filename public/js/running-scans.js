@@ -1,4 +1,4 @@
-import { populateCaptions } from './util.js'
+import { populateCaptions, getData } from './util.js'
 
 const tables = document.getElementsByTagName('table')
 
@@ -6,21 +6,14 @@ export async function runningScans(){
     for(let i=0; i<tables.length; i++){ tables[i].innerHTML = '' }
 
     try{
-        const year = await getScans('year')
-        const month = await getScans('month')
+        const year = await getData('scans', 'year')
+        const month = await getData('scans', 'month')
         populateHeaders()
         populateTable(year, month)
     }
     catch(err){
         document.getElementById('table-year').innerHTML = err
     }
-}
-
-async function getScans(time){
-    const request = await fetch('http://localhost:8080/scans/' + time)
-    if(request.status !== 200) { throw new Error('Data not found') }
-    const response = await request.json()
-    return response
 }
 
 function populateHeaders(){

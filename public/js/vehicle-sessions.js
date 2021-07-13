@@ -1,4 +1,4 @@
-import { populateCaptions } from './util.js'
+import { populateCaptions, getData } from './util.js'
 
 const tables = document.getElementsByTagName('table')
 
@@ -6,8 +6,8 @@ export async function vehicleSessions() {
     for(let i=0; i<tables.length; i++){ tables[i].innerHTML = '' }
 
     try{
-        const year = await getData('year')
-        const month = await getData('month')
+        const year = await getData('vehicle-sessions','year')
+        const month = await getData('vehicle-sessions','month')
         populateHeaders()
         populateTable(year, month)
     }
@@ -16,14 +16,6 @@ export async function vehicleSessions() {
     }
 
 }
-
-async function getData(time){
-    const request = await fetch('http://localhost:8080/vehicle-sessions/' + time)
-    if(request.status !== 200) { throw new Error('Data not found') }
-    const response = await request.json()
-    return response
-}
-
 
 function populateHeaders(){
     for(let i=0; i<tables.length; i++){

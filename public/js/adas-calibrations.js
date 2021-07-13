@@ -1,25 +1,18 @@
-import { populateCaptions } from './util.js'
+import { populateCaptions, getData } from './util.js'
 
 const tables = document.getElementsByTagName('table')
 
 export async function adasCalibrations(){
     for(let i=0; i<tables.length; i++){ tables[i].innerHTML = '' }
     try{
-        const year = await getCalibrations('year')
-        const month = await getCalibrations('month')
+        const year = await getData('calibrations', 'year')
+        const month = await getData('calibrations', 'month')
         populateHeaders()
         populateTable(year, month)
     }
     catch(err){
         tables.innerHTML = err
     }
-}
-
-async function getCalibrations(time){
-    const request = await fetch('http://localhost:8080/calibrations/' + time)
-    if(request.status !== 200) { throw new Error('Data not found') }
-    const response = await request.json()
-    return response
 }
 
 function populateHeaders(){

@@ -1,24 +1,18 @@
+import { getData } from './util.js'
+
 const table = document.getElementById('table-year')
+const tables = document.getElementsByTagName('table')
 
 export async function devicesOnline(){
-    const links = document.getElementById('timeLinks')
-    links.innerHTML = ''
-    table.innerHTML = ''
+    for(let i=0; i<tables.length; i++){ tables[i].innerHTML = '' }
     try{
-        const data = await getDevicesOnline()
+        const data = await getData('devices-online', '')
         populateDeviceHeaders()
         populateTable(data)
     } 
     catch(err){
         table.innerHTML = err
     }
-}
-
-async function getDevicesOnline(){
-    const request = await fetch('http://localhost:8080/devices-online')
-    if(request.status !== 200) { throw new Error('Data not found') }
-    const response = await request.json()
-    return response
 }
 
 function populateTable(data){
