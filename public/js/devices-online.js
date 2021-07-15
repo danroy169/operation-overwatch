@@ -10,6 +10,7 @@ export async function devicesOnline(){
         const data = await getData('devices-online', '')
         populateHeaders(tables, headers)
         populateRows(data, table)
+        for(let i=1; i<tables.length; i++){ tables[i].innerHTML = '' }
     } 
     catch(err){
         table.innerHTML = err
