@@ -1,15 +1,10 @@
-import { populateRows, populateHeaders, getData } from './util.js'
+import { getData } from './util.js'
 
-const tables = document.getElementsByTagName('table')
-const headers = ['Year', 'Month', 'Report Type', 'Count']
 
 export async function runningScans(){
-    for(let i=0; i<tables.length; i++){ tables[i].innerHTML = '' }
-
     try{
         const year = await getData('scans', 'year')
         const month = await getData('scans', 'month')
-        populateHeaders(tables, headers)
         populateTable(year, month)
     }
     catch(err){
@@ -18,8 +13,9 @@ export async function runningScans(){
 }
 
 function populateTable(year, month){
-    for (let i=0; i<tables.length; i++){
-        if(tables[i].id === 'table-year'){ populateRows(year, tables[i]) }
-        if(tables[i].id === 'table-month'){ populateRows(month, tables[i]) }
-    }
+    const yearTD = document.getElementById('scan-year')
+    const monthTD = document.getElementById('scan-month')
+
+    yearTD.innerHTML = year.toLocaleString()
+    monthTD.innerHTML = month.toLocaleString()
 }

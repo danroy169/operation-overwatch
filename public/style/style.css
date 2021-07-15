@@ -19,10 +19,10 @@ html, body{
 body{
     display: grid;
     grid-template-areas: 
-        "header header"
-        "nav main";
+        "header"
+        "main";
     grid-template-rows: 1em auto;
-    grid-template-columns: 10em auto;
+
     margin: 0;
     background-color: rgb(225,225,226);
     
@@ -42,14 +42,19 @@ main{
     grid-area: main;
     display: grid;
     grid-template-areas: 
-        "title"
-        "content";
+        "title title"
+        "content online";
     grid-template-rows: min-content auto;
 }
-.content{
+#content{
     grid-area: content;
     justify-self: center;
-    display: inline;
+    
+}
+#devices-online{
+    grid-area: online;
+    /* justify-self: center;
+    align-self: center; */
 }
 #logo{
     width: 95%;

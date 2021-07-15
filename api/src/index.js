@@ -29,8 +29,16 @@ app.get('/vehicle-sessions/year', (req, res) => {
 
     read('../../Vehicle_Sessions.json')
         .then(obj => { 
-            const filtered = obj.filter(item => { return item.YEAR === 2021 })
-            res.json(filtered)
+            const encore = obj.filter(item => { return item.YEAR === 2021 && item.product === 'Encore' })
+                .map(item => item.Count)
+                .reduce((accum, curr) => { return accum + curr })
+            const mpp = obj.filter(item => { return item.YEAR === 2021 && item.product === 'MPP_2018' })
+                .map(item => item.Count)
+                .reduce((accum, curr) => { return accum + curr })
+            const dvci = obj.filter(item => { return item.YEAR === 2021 && item.product === 'DVCI' })
+                .map(item => item.Count)
+                .reduce((accum, curr) => { return accum + curr })
+            res.json({encore, mpp, dvci})
         })
 })
 
@@ -49,8 +57,6 @@ app.get('/vehicle-sessions/month', (req, res) => {
 })
 
 app.get('/calibrations', (req, res) => {
-
-    const result = {}
     res.set({
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Credentials': true
@@ -58,8 +64,7 @@ app.get('/calibrations', (req, res) => {
 
     getCalibrations(process.env.CALIBRATIONS)
         .then(response => { res.json(response) })
-        .catch(err => { result.year = err.message })
-    
+        .catch(err => { res.send(err) })
 })
 
 
@@ -86,7 +91,9 @@ app.get('/scans/year', (req, res) => {
 
     read('../../Calibrations_and_Scans.json')
         .then(obj => {
-            const filtered = obj.filter(item => { return item.REPORTTYPE !== 'CALIBRATIONREPORT' && item.YEAR === 2021 })
+            const filtered = obj.filter(item => { return item.REPORTTYPE === 'SCANREPORT' && item.YEAR === 2021 })
+                .map(item => item.Count)
+                .reduce((accum, curr) => { return accum + curr })
             res.json(filtered)
         })
 
@@ -101,7 +108,9 @@ app.get('/scans/month', (req, res) => {
 
     read('../../Calibrations_and_Scans.json')
         .then(obj => {
-            const filtered = obj.filter(item => { return item.REPORTTYPE !== 'CALIBRATIONREPORT' && item.YEAR === 2021 && item.MONTH === 7 })
+            const filtered = obj.filter(item => { return item.REPORTTYPE === 'SCANREPORT' && item.YEAR === 2021 && item.MONTH === 7 })
+                .map(item => item.Count)
+                .reduce((accum, curr) => { return accum + curr })
             res.json(filtered)
         })
 
