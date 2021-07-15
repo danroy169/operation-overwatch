@@ -1,7 +1,7 @@
 import express from 'express'
 import { readFile } from 'node:fs/promises'
 import { config } from 'dotenv'
-import { getCalibrationsYear } from './calibrations.js'
+import { getCalibrations } from './calibrations.js'
 
 
 config()
@@ -48,16 +48,18 @@ app.get('/vehicle-sessions/month', (req, res) => {
         })
 })
 
-app.get('/calibrations/year', (req, res) => {
+app.get('/calibrations', (req, res) => {
 
+    const result = {}
     res.set({
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Credentials': true
     })
 
-    getCalibrationsYear()
-        .then(result => res.json(result))
-        .catch(err => { res.status(500); res.send(err.message) })
+    getCalibrations(process.env.CALIBRATIONS)
+        .then(response => { res.json(response) })
+        .catch(err => { result.year = err.message })
+    
 })
 
 

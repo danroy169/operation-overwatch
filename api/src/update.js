@@ -20,6 +20,4 @@ export async function getCalibrations(query) {
     return result.recordset
 }
 
-
-
-
+getCalibrations(process.env.UPDATE_TEST).then(result => console.log(result))
