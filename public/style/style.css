@@ -49,7 +49,31 @@ main{
 #content{
     grid-area: content;
     justify-self: center;
-    
+    display: grid;
+    grid-template-areas:
+        "calibration scan"
+        "special sessions";
+    grid-template-rows: min-content;
+}
+#calibration-grid{
+    grid-area: calibration;
+    justify-self: center;
+    margin: 1em;
+}
+#scans-grid{
+    grid-area: scan;
+    justify-self: center;
+    margin: 1em;
+}
+#special-grid{
+    grid-area: special;
+    justify-self: center;
+    margin: 1em;
+}
+#sessions-grid{
+    grid-area: sessions;
+    justify-self: center;
+    margin: 1em;
 }
 #devices-online{
     grid-area: online;
