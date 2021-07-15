@@ -1,5 +1,5 @@
 import express from 'express'
-import sql from 'mssql'
+//import sql from 'mssql'
 import { readFile } from 'node:fs/promises'
 import { config } from 'dotenv'
 
@@ -48,20 +48,6 @@ app.get('/vehicle-sessions/month', (req, res) => {
         })
 })
 
-// app.get('/calibrations/year', (req, res) => {
-
-//     res.set({
-//         'Access-Control-Allow-Origin': '*',
-//         'Access-Control-Allow-Credentials': true
-//     })
-
-//     read('../../Calibrations_and_Scans.json')
-//         .then(obj => {
-//             const filtered = obj.filter(item => { return item.REPORTTYPE === 'CALIBRATIONREPORT' && item.YEAR === 2021 })
-//             res.json(filtered)
-//         })
-// })
-
 app.get('/calibrations/year', (req, res) => {
 
     res.set({
@@ -69,29 +55,43 @@ app.get('/calibrations/year', (req, res) => {
         'Access-Control-Allow-Credentials': true
     })
 
-    sql.on('error', err => { res.send(err) })
-
-    const config = {
-        user: process.env.USERNAME,
-        password: process.env.PASSWORD,
-        server: process.env.SERVER,
-        database: process.env.REPORT_DB,
-        options: {
-            trustServerCertificate: true // true for local dev / self-signed certs
-          }
-    }
-
-    sql.connect(config)
-    .then(() => {
-        return sql.query`SELECT  COUNT([REPORTTIMESTAMP]) AS ThisYear
-        FROM [DB_IAMReportServices_SQL].[RS].[REPORT_DATA_PROCESSED]
-        WHERE [REPORTTYPE] = 'CALIBRATIONREPORT'
-        AND [REPORTTIMESTAMP] between (select dateadd(year, -1, getdate())) and  getdate()
-        `
-    })
-    .then(result => { res.json(result) })
-    .catch(err => { res.send(err) })
+    read('../../Calibrations_and_Scans.json')
+        .then(obj => {
+            const filtered = obj.filter(item => { return item.REPORTTYPE === 'CALIBRATIONREPORT' && item.YEAR === 2021 })
+            res.json(filtered)
+        })
 })
+
+// app.get('/calibrations/year', (req, res) => {
+
+//     res.set({
+//         'Access-Control-Allow-Origin': '*',
+//         'Access-Control-Allow-Credentials': true
+//     })
+
+//     sql.on('error', err => { res.send(err) })
+
+//     const config = {
+//         user: process.env.USERNAME,
+//         password: process.env.PASSWORD,
+//         server: process.env.SERVER,
+//         database: process.env.REPORT_DB,
+//         options: {
+//             trustServerCertificate: true // true for local dev / self-signed certs
+//           }
+//     }
+
+//     sql.connect(config)
+//     .then(() => {
+//         return sql.query`SELECT  COUNT([REPORTTIMESTAMP]) AS ThisYear
+//         FROM [DB_IAMReportServices_SQL].[RS].[REPORT_DATA_PROCESSED]
+//         WHERE [REPORTTYPE] = 'CALIBRATIONREPORT'
+//         AND [REPORTTIMESTAMP] between (select dateadd(year, -1, getdate())) and  getdate()
+//         `
+//     })
+//     .then(result => { res.json(result) })
+//     .catch(err => { res.send(err) })
+// })
 
 
 app.get('/calibrations/month', (req, res) => {
