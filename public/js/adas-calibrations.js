@@ -14,9 +14,8 @@ export async function adasCalibrations(row){
 
 function populateRow(data, row){
     for (const item in data){
-        console.log(item)
         const td = document.createElement('td')
-        td.innerHTML = data[item].toLocaleString()
+        td.innerHTML = data[item].Result.toLocaleString()
 
         row.appendChild(td)
     }

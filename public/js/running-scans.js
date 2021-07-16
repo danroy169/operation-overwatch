@@ -15,7 +15,7 @@ export async function runningScans(row){
 function populateTable(data, row){
     for (const item in data){
         const td = document.createElement('td')
-        td.innerHTML = data[item].toLocaleString()
+        td.innerHTML = data[item].Result.toLocaleString()
 
         row.appendChild(td)
     }
