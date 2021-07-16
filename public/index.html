@@ -19,18 +19,18 @@
     </nav> -->
     <main>
         <h1>IAM Diagnostics Dashboard</h1>
-        <div class="content" id="devices-online">
-            <table id="devices-table">
-                <caption>Unique Tools Online</caption>
-                <tr>
-                    <th>Product</th>
-                    <th>Brand</th>
-                    <th>Devices Online</th>
-                </tr>
-            </table>
-        </div>
-        <div class="content" id="content">
-            <div id='calibration-grid'>
+        <div class="content">
+            <div id="devices-online">
+                <table id="devices-table">
+                    <caption>Unique Tools Online</caption>
+                    <tr>
+                        <th>Product</th>
+                        <th>Brand</th>
+                        <th>Devices Online</th>
+                    </tr>
+                </table>
+            </div>
+            <div id='scans-grid'>
                 <table id="calibrations-table">
                     <caption>Number of ADAS Calibrations</caption>
                     <tr>
@@ -42,8 +42,6 @@
                     <tr id="calibration-row">
                     </tr>
                 </table>
-            </div>
-            <div id='scans-grid'>
                 <table id="scans-table">
                     <caption>Number of Running Scans</caption>
                     <tr>
@@ -59,8 +57,6 @@
                         <td id='scan-year'></td>
                     </tr>
                 </table>
-            </div>
-            <div id='special-grid'>
                 <table id="special-table">
                     <caption>Number of Non-ADAS Special Tests</caption>
                     <tr>

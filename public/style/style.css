@@ -42,43 +42,35 @@ main{
     grid-area: main;
     display: grid;
     grid-template-areas: 
-        "title title"
-        "content online";
+        "title"
+        "content";
     grid-template-rows: min-content auto;
 }
-#content{
+.content{
     grid-area: content;
     justify-self: center;
     display: grid;
     grid-template-areas:
-        "calibration scan"
-        "special sessions";
-    grid-template-rows: min-content;
-}
-#calibration-grid{
-    grid-area: calibration;
-    justify-self: center;
-    margin: 1em;
+        "scan sessions online"
+        "scan sessions online"
+        "scan sessions online";
+
 }
 #scans-grid{
     grid-area: scan;
-    justify-self: center;
     margin: 1em;
-}
-#special-grid{
-    grid-area: special;
-    justify-self: center;
-    margin: 1em;
+
 }
 #sessions-grid{
     grid-area: sessions;
-    justify-self: center;
     margin: 1em;
+
 }
 #devices-online{
     grid-area: online;
-    /* justify-self: center;
-    align-self: center; */
+;
+    margin: 1em;
+
 }
 #logo{
     width: 95%;
@@ -103,7 +95,7 @@ h1{
 }
 table{
     border-collapse: collapse;
-    margin: 1em;
+    margin: 2em;
 }
 th{
     text-align: center;
@@ -116,6 +108,7 @@ table, td{
     border: 2px solid rgb(64, 66, 69);
     background-color: rgb(241, 241,241);
     text-align: center;
+    padding: 0.5em;
 }
 #timeLinks{
     text-align: center;
