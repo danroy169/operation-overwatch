@@ -1,15 +1,12 @@
-import { populateRows, populateHeaders, getData } from './util.js'
+import { getData } from './util.js'
 
-const tables = document.getElementsByTagName('table')
-const headers = ['Year', 'Month', 'Product', 'Count']
 
 export async function vehicleSessions() {
-    for(let i=0; i<tables.length; i++){ tables[i].innerHTML = '' }
+
 
     try{
         const year = await getData('vehicle-sessions','year')
         const month = await getData('vehicle-sessions','month')
-        populateHeaders(tables, headers)
         populateTable(year, month)
     }
     catch (err){
@@ -19,8 +16,22 @@ export async function vehicleSessions() {
 }
 
 function populateTable(year, month){
-    for (let i=0; i<tables.length; i++){
-        if(tables[i].id === 'table-year'){ populateRows(year, tables[i]) }
-        if(tables[i].id === 'table-month'){ populateRows(month, tables[i]) }
+    const dvciMonth = document.getElementById('dvci-month')
+    const dvciYear = document.getElementById('dvci-year')
+    const mpMonth = document.getElementById('mp-month')
+    const mpYear = document.getElementById('mp-year')
+    const encoreMonth = document.getElementById('encore-month')
+    const encoreYear = document.getElementById('encore-year')
+
+    for(const item in month){
+        if(month[item].product === 'Encore') { encoreMonth.innerHTML = month[item].Count.toLocaleString() }
+        if(month[item].product === 'DVCI') { dvciMonth.innerHTML = month[item].Count.toLocaleString() }
+        if(month[item].product === 'MPP_2018') { mpMonth.innerHTML = month[item].Count.toLocaleString() }
     }
+
+
+    encoreYear.innerHTML = year.encore.toLocaleString() 
+    dvciYear.innerHTML = year.dvci.toLocaleString() 
+    mpYear.innerHTML = year.mpp.toLocaleString() 
+
 }

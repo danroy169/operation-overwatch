@@ -9,22 +9,95 @@
 </head>
 <body>
     <header></header>
-    <nav>
-        <img id="logo" src="../images/BOSCH_RGB.png">
-        <div class="link" id="devicesOnline">Devices Online</div>
-        <div class="link" id="adasCalibrations">ADAS Calibrations</div>
-        <div class="link" id="runningScans">Running Scans</div>
-        <div class="link" id="vehicleSessions">Vehicle Sessions</div>
-        <div class="link" id="specialTests">Special Tests</div>
-    </nav>
     <main>
         <h1>IAM Diagnostics Dashboard</h1>
-        <div class="content" id="content">
-            <div id="timeLinks"></div>
-            <table id="table-year"></table>
-            <table id="table-month"></table>
-            <table id="table-week"></table>
-            <table id="table-day"></table>
+        <div class="content">
+            <div id="devices-online">
+                <table id="devices-table">
+                    <caption>Unique Tools Online</caption>
+                    <tr>
+                        <th>Product</th>
+                        <th>Brand</th>
+                        <th>Devices Online</th>
+                    </tr>
+                </table>
+            </div>
+            <div id='scans-grid'>
+                <table id="calibrations-table">
+                    <caption>Number of ADAS Calibrations</caption>
+                    <tr>
+                        <th>Today</th>
+                        <th>This Week</th>
+                        <th>This Month</th>
+                        <th>This Year</th>
+                    </tr>
+                    <tr id="calibration-row">
+                    </tr>
+                </table>
+                <table id="scans-table">
+                    <caption>Number of Running Scans</caption>
+                    <tr>
+                        <th>Today</th>
+                        <th>This Week</th>
+                        <th>This Month</th>
+                        <th>This Year</th>
+                    </tr>
+                    <tr id='scans-row'>
+                        <td id='scan-today'>1</td>
+                        <td id='scan-week'>1</td>
+                        <td id='scan-month'></td>
+                        <td id='scan-year'></td>
+                    </tr>
+                </table>
+                <table id="special-table">
+                    <caption>Number of Non-ADAS Special Tests</caption>
+                    <tr>
+                        <th>Today</th>
+                        <th>This Week</th>
+                        <th>This Month</th>
+                        <th>This Year</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                </table>
+            </div>
+            <div id='sessions-grid'>
+                <table id="sessions-table">
+                    <caption>Number of Vehicle Sessions by Device Type</caption>
+                    <tr>
+                        <th></th>
+                        <th>Today</th>
+                        <th>This Week</th>
+                        <th>This Month</th>
+                        <th>This Year</th>
+                    </tr>
+                    <tr>
+                        <th>MPP_2018</th>
+                        <td>1</td>
+                        <td>1</td>
+                        <td id="mp-month">1</td>
+                        <td id="mp-year">1</td>
+                    </tr>
+                    <tr>
+                        <th>Encore</th>
+                        <td>1</td>
+                        <td>1</td>
+                        <td id="encore-month">1</td>
+                        <td id="encore-year">1</td>
+                    </tr>
+                    <tr>
+                        <th>DVCI</th>
+                        <td>1</td>
+                        <td>1</td>
+                        <td id="dvci-month">1</td>
+                        <td id="dvci-year">1</td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </main>
 </body>

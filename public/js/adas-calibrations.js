@@ -1,47 +1,27 @@
-import { populateHeaders, getData } from './util.js'
+import { getData } from './util.js'
 
-const tables = document.getElementsByTagName('table')
-const headers = ['Year', 'Month', 'Report Type', 'Count']
+const row = document.getElementById('calibration-row')
+
 
 export async function adasCalibrations(){
-    for(let i=0; i<tables.length; i++){ tables[i].innerHTML = '' }
     try{
-        const year = await getData('calibrations', 'year')
-        const month = await getData('calibrations', 'month')
-        populateHeaders(tables, headers)
-        populateTable(year, month)
+        row.innerHTML = 'Loading'
+        const year = await getData('calibrations', '')
+        row.innerHTML = ''
+        populateRows(year, row)
     }
     catch(err){
-        tables.innerHTML = err
+        console.log(err)
     }
 }
 
-function populateTable(year, month){
-    for (let i=0; i<tables.length; i++){
-        if(tables[i].id === 'table-year'){ populateRows(year, tables[i]) }
-        if(tables[i].id === 'table-month'){ populateRows(month, tables[i]) }
-    }
-}
-
-function populateRows(data, table){
+function populateRows(data, row){
+    console.log(data)
     for (const item in data){
-        const row = document.createElement('tr')
+        console.log(item)
+        const td = document.createElement('td')
+        td.innerHTML = data[item].Result.toLocaleString()
 
-        const year = document.createElement('td')
-        const month = document.createElement('td')
-        const reportType = document.createElement('td')
-        const count = document.createElement('td')
-   
-        year.innerHTML = data[item].YEAR
-        month.innerHTML = data[item].MONTH
-        reportType.innerHTML = data[item].REPORTTYPE
-        count.innerHTML = data[item].Count.toLocaleString()
-
-        row.appendChild(year)
-        row.appendChild(month)
-        row.appendChild(reportType)
-        row.appendChild(count)
-
-        table.appendChild(row)
+        row.appendChild(td)
     }
 }

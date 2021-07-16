@@ -5,11 +5,10 @@ import { adasCalibrations } from './adas-calibrations.js'
 import { specialTests } from './special-tests.js'
 
 function init(){
-    document.getElementById('devicesOnline').addEventListener('click', devicesOnline)
-    document.getElementById('adasCalibrations').addEventListener('click', adasCalibrations)
-    document.getElementById('runningScans').addEventListener('click', runningScans)
-    document.getElementById('vehicleSessions').addEventListener('click', vehicleSessions)
-    document.getElementById('specialTests').addEventListener('click', specialTests)
+    devicesOnline()
+    runningScans()
+    vehicleSessions()
+    adasCalibrations()
 }
 
 
