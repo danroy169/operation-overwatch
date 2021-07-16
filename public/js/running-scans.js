@@ -1,21 +1,22 @@
 import { getData } from './util.js'
 
-
-export async function runningScans(){
+export async function runningScans(row){
     try{
-        const year = await getData('scans', 'year')
-        const month = await getData('scans', 'month')
-        populateTable(year, month)
+        row.innerHTML = 'Loading'
+        const data = await getData('scans', '')
+        row.innerHTML = ''
+        populateTable(data, row)
     }
     catch(err){
-        document.getElementById('table-year').innerHTML = err
+        row.innerHTML = err
     }
 }
 
-function populateTable(year, month){
-    const yearTD = document.getElementById('scan-year')
-    const monthTD = document.getElementById('scan-month')
+function populateTable(data, row){
+    for (const item in data){
+        const td = document.createElement('td')
+        td.innerHTML = data[item].toLocaleString()
 
-    yearTD.innerHTML = year.toLocaleString()
-    monthTD.innerHTML = month.toLocaleString()
+        row.appendChild(td)
+    }
 }

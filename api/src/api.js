@@ -1,7 +1,9 @@
 import express from 'express'
 import { readFile } from 'node:fs/promises'
 import { config } from 'dotenv'
-import { getCalibrations } from './calibrations.js'
+import { calibrationsConfig } from './calibrations.js'
+import { scansConfig } from './scans.js'
+import { getFromDB } from './db.js'
 
 
 config()
@@ -32,12 +34,15 @@ app.get('/vehicle-sessions/year', (req, res) => {
             const encore = obj.filter(item => { return item.YEAR === 2021 && item.product === 'Encore' })
                 .map(item => item.Count)
                 .reduce((accum, curr) => { return accum + curr })
+
             const mpp = obj.filter(item => { return item.YEAR === 2021 && item.product === 'MPP_2018' })
                 .map(item => item.Count)
                 .reduce((accum, curr) => { return accum + curr })
+
             const dvci = obj.filter(item => { return item.YEAR === 2021 && item.product === 'DVCI' })
                 .map(item => item.Count)
                 .reduce((accum, curr) => { return accum + curr })
+
             res.json({encore, mpp, dvci})
         })
 })
@@ -62,58 +67,40 @@ app.get('/calibrations', (req, res) => {
         'Access-Control-Allow-Credentials': true
     })
 
-    getCalibrations(process.env.CALIBRATIONS)
-        .then(response => { res.json(response) })
+    getFromDB(calibrationsConfig,process.env.CALIBRATIONS)
+        .then(response => { 
+            const data = {
+                day: response[0].Result,
+                week: response[1].Result,
+                month: response[2].Result,
+                year: response[3].Result
+            }
+            res.json(data) 
+        })
         .catch(err => { res.send(err) })
 })
 
-app.get('/calibrations/month', (req, res) => {
+app.get('/scans/', (req, res) => {
 
     res.set({
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Credentials': true
     })
 
-    read('../../Calibrations_and_Scans.json')
-        .then(obj => {
-            const filtered = obj.filter(item => { return item.REPORTTYPE === 'CALIBRATIONREPORT' && item.YEAR === 2021 && item.MONTH === 7 })
-            res.json(filtered)
+    getFromDB(scansConfig, process.env.SCANS)
+        .then(response => {
+            const data = {
+                day: response[0].Result,
+                week: response[1].Result,
+                month: response[2].Result,
+                year: response[3].Result
+            }
+            res.json(data)
         })
-})
-
-app.get('/scans/year', (req, res) => {
-
-    res.set({
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Credentials': true
-    })
-
-    read('../../Calibrations_and_Scans.json')
-        .then(obj => {
-            const filtered = obj.filter(item => { return item.REPORTTYPE === 'SCANREPORT' && item.YEAR === 2021 })
-                .map(item => item.Count)
-                .reduce((accum, curr) => { return accum + curr })
-            res.json(filtered)
-        })
+        .catch(err => { res.send(err) })
 
 })
 
-app.get('/scans/month', (req, res) => {
-
-    res.set({
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Credentials': true
-    })
-
-    read('../../Calibrations_and_Scans.json')
-        .then(obj => {
-            const filtered = obj.filter(item => { return item.REPORTTYPE === 'SCANREPORT' && item.YEAR === 2021 && item.MONTH === 7 })
-                .map(item => item.Count)
-                .reduce((accum, curr) => { return accum + curr })
-            res.json(filtered)
-        })
-
-})
 
 async function read(path){
     const obj = await readFile(path)

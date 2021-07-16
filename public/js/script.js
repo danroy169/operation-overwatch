@@ -4,11 +4,14 @@ import { vehicleSessions } from './vehicle-sessions.js'
 import { adasCalibrations } from './adas-calibrations.js'
 import { specialTests } from './special-tests.js'
 
+const calibrationsRow = document.getElementById('calibration-row')
+const scansRow = document.getElementById('scans-row')
+
 function init(){
     devicesOnline()
-    runningScans()
+    runningScans(scansRow)
     vehicleSessions()
-    adasCalibrations()
+    adasCalibrations(calibrationsRow)
 }
 
 

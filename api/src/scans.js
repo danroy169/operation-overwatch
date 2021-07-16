@@ -1,9 +1,8 @@
 import { config } from 'dotenv'
 
-
 config()
 
-export const calibrationsConfig = {
+export const scansConfig = {
     user: process.env.USERNAME,
     password: process.env.PASSWORD,
     server: process.env.SERVER,
@@ -13,11 +12,7 @@ export const calibrationsConfig = {
     }
 }
 
-// export async function getCalibrations(query) {
-//     await sql.connect(sqlConfig)
-//     const result = await sql.query(query)
-//     return result.recordset
-// }
+
 
 
 
