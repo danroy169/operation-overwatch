@@ -34,10 +34,6 @@ header{
     background-size:cover;
     
 }
-nav{
-    grid-area: nav;
-    background-color:rgb(64, 66, 69);
-}
 main{
     grid-area: main;
     display: grid;
@@ -68,9 +64,7 @@ main{
 }
 #devices-online{
     grid-area: online;
-;
     margin: 1em;
-
 }
 #logo{
     width: 95%;
@@ -82,16 +76,6 @@ h1{
     grid-area: title;
     text-align: center;
     margin: 0;
-}
-.link:hover{
-    background-color: rgb(128, 130, 133);
-    cursor: pointer;
-}
-.link{
-    text-align: center;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    color: rgb(225,225,226);
 }
 table{
     border-collapse: collapse;
@@ -109,16 +93,4 @@ table, td{
     background-color: rgb(241, 241,241);
     text-align: center;
     padding: 0.5em;
-}
-#timeLinks{
-    text-align: center;
-    margin: 1em;
-}
-a{
-    margin: 1em;
-    color: rgb(0,59,106);
-    text-decoration: none;
-}
-a:hover{
-    color: rgb(0,20,42)
 }
