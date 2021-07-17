@@ -1,6 +1,6 @@
 export async function getData(path, time){
     const request = await fetch('http://localhost:8080/' + path + '/' + time)
-    if(request.status !== 200) { throw new Error('Data not found') }
+    if(request.status !== 200) { throw new Error(request.status) }
     const response = await request.json()
     return response
 }

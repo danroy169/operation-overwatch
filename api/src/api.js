@@ -31,7 +31,7 @@ app.get('/vehicle-sessions/', (req, res) => {
 
     getFromDB(bbDBConfig, process.env.SESSIONS)
         .then(response => { res.json(response) })
-        .catch(err => { res.send(err) })
+        .catch(err => { res.status(503).send(err) })
 })
 
 app.get('/calibrations', (req, res) => {
@@ -42,7 +42,7 @@ app.get('/calibrations', (req, res) => {
 
     getFromDB(reportServiceDBConfig,process.env.CALIBRATIONS)
         .then(response => { res.json(response[0]) })
-        .catch(err => { res.send(err) })
+        .catch(err => { res.status(503).send(err) })
 })
 
 app.get('/scans/', (req, res) => {
@@ -54,7 +54,7 @@ app.get('/scans/', (req, res) => {
 
     getFromDB(reportServiceDBConfig, process.env.SCANS)
         .then(response => { res.json(response[0]) })
-        .catch(err => { res.send(err) })
+        .catch(err => { res.status(503).send(err) })
 })
 
 app.get('/special-tests', (req, res) => {
@@ -66,7 +66,7 @@ app.get('/special-tests', (req, res) => {
 
     getFromDB(bbDBConfig, process.env.BB)
         .then(response => { res.json(response[0]) })
-        .catch(err => { res.send(err) })
+        .catch(err => { res.status(503).send(err) })
 })
 
 
